@@ -3,27 +3,133 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A806620726146AC300ADD43E /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806620626146AC300ADD43E /* IntroduceViewController.swift */; };
+		A806620A26146ACC00ADD43E /* Introduce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A806620926146ACC00ADD43E /* Introduce.storyboard */; };
+		A8069205261249A000AC4009 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8069204261249A000AC4009 /* CharacterViewController.swift */; };
+		A8119976260CE3BD001BCC49 /* DogProfileImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8119975260CE3BD001BCC49 /* DogProfileImage.storyboard */; };
+		A8119979260CE522001BCC49 /* DogImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8119978260CE522001BCC49 /* DogImageCell.swift */; };
+		A811997D260CECFF001BCC49 /* DogProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A811997C260CECFF001BCC49 /* DogProfileViewModel.swift */; };
+		A8288A03261070A700ECEDCF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8288A02261070A700ECEDCF /* ProfileViewModel.swift */; };
+		A8288A06261071AE00ECEDCF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8288A05261071AE00ECEDCF /* Profile.swift */; };
+		A8288A0A2610767800ECEDCF /* OnwerImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8288A092610767800ECEDCF /* OnwerImageViewController.swift */; };
+		A8288A0D2610768500ECEDCF /* OnwerImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8288A0C2610768500ECEDCF /* OnwerImage.storyboard */; };
+		A834BC5B2603300C00226A5D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A834BC5A2603300C00226A5D /* FirebaseManager.swift */; };
+		A834BC5F260330B200226A5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A834BC5E260330B200226A5D /* GoogleService-Info.plist */; };
+		A834BC81260332B800226A5D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A834BC80260332B800226A5D /* UserInfoManager.swift */; };
+		A834BC87260332F700226A5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A834BC86260332F700226A5D /* User.swift */; };
+		A83A84F926107D4C0060698F /* OnwerImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A84F826107D4C0060698F /* OnwerImageCell.swift */; };
+		A83A84FC26107ED20060698F /* OnwerImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A84FB26107ED20060698F /* OnwerImageViewModel.swift */; };
+		A83A84FF2610F6D20060698F /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A84FE2610F6D20060698F /* FirebaseStorageManager.swift */; };
+		A83A85042611EB140060698F /* MyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83A85032611EB140060698F /* MyInfo.storyboard */; };
+		A83A85072611EB870060698F /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A85062611EB870060698F /* MyInfoViewController.swift */; };
+		A83D555C26034C62007D10BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D555B26034C62007D10BC /* ProfileViewController.swift */; };
+		A83D556026034C70007D10BC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83D555F26034C70007D10BC /* Profile.storyboard */; };
+		A83D55832603BADA007D10BC /* Basic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83D55822603BADA007D10BC /* Basic.storyboard */; };
+		A83D55862603BAF9007D10BC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55852603BAF9007D10BC /* MapViewController.swift */; };
+		A83D55C726049BBB007D10BC /* WalkingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55C626049BBB007D10BC /* WalkingLocationViewController.swift */; };
+		A83D55CF26049C3F007D10BC /* WalkingLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83D55CE26049C3F007D10BC /* WalkingLocation.storyboard */; };
+		A83D55D32604E337007D10BC /* RegioncodeParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55D22604E337007D10BC /* RegioncodeParam.swift */; };
+		A83D55D82604E3DF007D10BC /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55D72604E3DF007D10BC /* KakaoAPIManager.swift */; };
+		A83D55DC2604E5A1007D10BC /* Regioncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55DB2604E5A1007D10BC /* Regioncode.swift */; };
+		A83D55DF2604EA4E007D10BC /* WalkingLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55DE2604EA4E007D10BC /* WalkingLocationViewModel.swift */; };
+		A86A8A012608A6A700BB131F /* GotogeDog_Loding_Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = A86A8A002608A6A700BB131F /* GotogeDog_Loding_Animation.json */; };
+		A8C03B2426185D3500257ADF /* WalkLoctionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B2326185D3500257ADF /* WalkLoctionViewModel.swift */; };
+		A8C03B282618697800257ADF /* RegisteredUsersRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B272618697800257ADF /* RegisteredUsersRegion.swift */; };
+		A8C03B4F261AF06E00257ADF /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B4E261AF06E00257ADF /* DogCell.swift */; };
+		A8C03B56261AF37C00257ADF /* AroundDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B55261AF37C00257ADF /* AroundDogViewModel.swift */; };
+		A8C03B5A261B818400257ADF /* DummyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B59261B818400257ADF /* DummyModel.swift */; };
 		A8C67BB625FF587A00D1966F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67BB525FF587A00D1966F /* AppDelegate.swift */; };
 		A8C67BB825FF587A00D1966F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67BB725FF587A00D1966F /* SceneDelegate.swift */; };
-		A8C67BBA25FF587A00D1966F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67BB925FF587A00D1966F /* ViewController.swift */; };
-		A8C67BBD25FF587A00D1966F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C67BBB25FF587A00D1966F /* Main.storyboard */; };
 		A8C67BBF25FF587B00D1966F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C67BBE25FF587B00D1966F /* Assets.xcassets */; };
 		A8C67BC225FF587B00D1966F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C67BC025FF587B00D1966F /* LaunchScreen.storyboard */; };
+		A8C67BDA25FF5B3F00D1966F /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67BD925FF5B3F00D1966F /* LodingViewController.swift */; };
+		A8C67BDE25FF5B4700D1966F /* Loding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C67BDD25FF5B4700D1966F /* Loding.storyboard */; };
+		A8C67BF425FF5F3300D1966F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67BF325FF5F3300D1966F /* LoginViewController.swift */; };
+		A8C67BF825FF5F3D00D1966F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C67BF725FF5F3D00D1966F /* Login.storyboard */; };
+		A8C67BFB25FF64AC00D1966F /* Logo_Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = A8C67BFA25FF64AC00D1966F /* Logo_Animation.json */; };
+		A8C67C1125FF674700D1966F /* AroundDog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C67C1025FF674700D1966F /* AroundDog.storyboard */; };
+		A8C67C1425FF675100D1966F /* AroundDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67C1325FF675100D1966F /* AroundDogViewController.swift */; };
+		A8C67C4A25FF6DE200D1966F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67C4925FF6DE200D1966F /* MasterViewController.swift */; };
+		A8C67C4D25FF6DFB00D1966F /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C67C4C25FF6DFB00D1966F /* Master.storyboard */; };
+		A8C67C5225FF6E8B00D1966F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67C5125FF6E8B00D1966F /* ChatViewController.swift */; };
+		A8C67C5625FF6E9300D1966F /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C67C5525FF6E9300D1966F /* Chat.storyboard */; };
+		A8C67C5925FFB3D300D1966F /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67C5825FFB3D300D1966F /* ChatRoomCell.swift */; };
+		A8C67C5D25FFB71700D1966F /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67C5C25FFB71700D1966F /* ChatRoom.swift */; };
+		A8DA304A26218CE100100748 /* AroundUserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA304926218CE100100748 /* AroundUserId.swift */; };
+		A8F642A226172747004A4256 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F642A126172747004A4256 /* CharacterCell.swift */; };
+		A8FBAFBD2609E53500416E6D /* DogProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBAFBC2609E53500416E6D /* DogProfileImageViewController.swift */; };
+		A8FBAFC6260CA81300416E6D /* Character.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FBAFC5260CA81300416E6D /* Character.storyboard */; };
+		A8FBAFC9260CC82D00416E6D /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBAFC8260CC82D00416E6D /* CharacterViewModel.swift */; };
+		F556D7D5A3C978A47CE6FF0C /* Pods_GoTogeDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D14592906B961BF8753A159 /* Pods_GoTogeDog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D14592906B961BF8753A159 /* Pods_GoTogeDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoTogeDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A806620626146AC300ADD43E /* IntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
+		A806620926146ACC00ADD43E /* Introduce.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce.storyboard; sourceTree = "<group>"; };
+		A8069204261249A000AC4009 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		A8119975260CE3BD001BCC49 /* DogProfileImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogProfileImage.storyboard; sourceTree = "<group>"; };
+		A8119978260CE522001BCC49 /* DogImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageCell.swift; sourceTree = "<group>"; };
+		A811997C260CECFF001BCC49 /* DogProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileViewModel.swift; sourceTree = "<group>"; };
+		A8288A02261070A700ECEDCF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A8288A05261071AE00ECEDCF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A8288A092610767800ECEDCF /* OnwerImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnwerImageViewController.swift; sourceTree = "<group>"; };
+		A8288A0C2610768500ECEDCF /* OnwerImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnwerImage.storyboard; sourceTree = "<group>"; };
+		A834BC5A2603300C00226A5D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		A834BC5E260330B200226A5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A834BC80260332B800226A5D /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		A834BC86260332F700226A5D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A83A84F826107D4C0060698F /* OnwerImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnwerImageCell.swift; sourceTree = "<group>"; };
+		A83A84FB26107ED20060698F /* OnwerImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnwerImageViewModel.swift; sourceTree = "<group>"; };
+		A83A84FE2610F6D20060698F /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
+		A83A85032611EB140060698F /* MyInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyInfo.storyboard; sourceTree = "<group>"; };
+		A83A85062611EB870060698F /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
+		A83D555B26034C62007D10BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A83D555F26034C70007D10BC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		A83D55822603BADA007D10BC /* Basic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basic.storyboard; sourceTree = "<group>"; };
+		A83D55852603BAF9007D10BC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A83D55C626049BBB007D10BC /* WalkingLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingLocationViewController.swift; sourceTree = "<group>"; };
+		A83D55CE26049C3F007D10BC /* WalkingLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkingLocation.storyboard; sourceTree = "<group>"; };
+		A83D55D22604E337007D10BC /* RegioncodeParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegioncodeParam.swift; sourceTree = "<group>"; };
+		A83D55D72604E3DF007D10BC /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
+		A83D55DB2604E5A1007D10BC /* Regioncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regioncode.swift; sourceTree = "<group>"; };
+		A83D55DE2604EA4E007D10BC /* WalkingLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingLocationViewModel.swift; sourceTree = "<group>"; };
+		A86A8A002608A6A700BB131F /* GotogeDog_Loding_Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GotogeDog_Loding_Animation.json; sourceTree = "<group>"; };
+		A8C03B2326185D3500257ADF /* WalkLoctionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkLoctionViewModel.swift; sourceTree = "<group>"; };
+		A8C03B272618697800257ADF /* RegisteredUsersRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredUsersRegion.swift; sourceTree = "<group>"; };
+		A8C03B4E261AF06E00257ADF /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
+		A8C03B55261AF37C00257ADF /* AroundDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundDogViewModel.swift; sourceTree = "<group>"; };
+		A8C03B59261B818400257ADF /* DummyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyModel.swift; sourceTree = "<group>"; };
 		A8C67BB225FF587A00D1966F /* GoTogeDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTogeDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C67BB525FF587A00D1966F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C67BB725FF587A00D1966F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A8C67BB925FF587A00D1966F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A8C67BBC25FF587A00D1966F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8C67BBE25FF587B00D1966F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C67BC125FF587B00D1966F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C67BC325FF587B00D1966F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C67BD925FF5B3F00D1966F /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
+		A8C67BDD25FF5B4700D1966F /* Loding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loding.storyboard; sourceTree = "<group>"; };
+		A8C67BF325FF5F3300D1966F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A8C67BF725FF5F3D00D1966F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A8C67BFA25FF64AC00D1966F /* Logo_Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo_Animation.json; sourceTree = "<group>"; };
+		A8C67C1025FF674700D1966F /* AroundDog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AroundDog.storyboard; sourceTree = "<group>"; };
+		A8C67C1325FF675100D1966F /* AroundDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundDogViewController.swift; sourceTree = "<group>"; };
+		A8C67C4925FF6DE200D1966F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		A8C67C4C25FF6DFB00D1966F /* Master.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Master.storyboard; sourceTree = "<group>"; };
+		A8C67C5125FF6E8B00D1966F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A8C67C5525FF6E9300D1966F /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		A8C67C5825FFB3D300D1966F /* ChatRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
+		A8C67C5C25FFB71700D1966F /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		A8DA304926218CE100100748 /* AroundUserId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundUserId.swift; sourceTree = "<group>"; };
+		A8F642A126172747004A4256 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		A8FBAFBC2609E53500416E6D /* DogProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileImageViewController.swift; sourceTree = "<group>"; };
+		A8FBAFC5260CA81300416E6D /* Character.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Character.storyboard; sourceTree = "<group>"; };
+		A8FBAFC8260CC82D00416E6D /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		F1D85FED75D3ADB5E13AA9CB /* Pods-GoTogeDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTogeDog.release.xcconfig"; path = "Target Support Files/Pods-GoTogeDog/Pods-GoTogeDog.release.xcconfig"; sourceTree = "<group>"; };
+		F6002E416821C848B06E9CA4 /* Pods-GoTogeDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTogeDog.debug.xcconfig"; path = "Target Support Files/Pods-GoTogeDog/Pods-GoTogeDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +137,134 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F556D7D5A3C978A47CE6FF0C /* Pods_GoTogeDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A806620526146AA900ADD43E /* Introduce */ = {
+			isa = PBXGroup;
+			children = (
+				A806620626146AC300ADD43E /* IntroduceViewController.swift */,
+				A806620926146ACC00ADD43E /* Introduce.storyboard */,
+			);
+			path = Introduce;
+			sourceTree = "<group>";
+		};
+		A8288A082610764E00ECEDCF /* OnwerImage */ = {
+			isa = PBXGroup;
+			children = (
+				A8288A092610767800ECEDCF /* OnwerImageViewController.swift */,
+				A8288A0C2610768500ECEDCF /* OnwerImage.storyboard */,
+				A83A84F826107D4C0060698F /* OnwerImageCell.swift */,
+			);
+			path = OnwerImage;
+			sourceTree = "<group>";
+		};
+		A834BC5926032FF800226A5D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A834BC80260332B800226A5D /* UserInfoManager.swift */,
+				A834BC5A2603300C00226A5D /* FirebaseManager.swift */,
+				A83D55D72604E3DF007D10BC /* KakaoAPIManager.swift */,
+				A83A84FE2610F6D20060698F /* FirebaseStorageManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A834BC7F260332A300226A5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8FBAFD2260CCF0A00416E6D /* Profile */,
+				A8C03B52261AF2DD00257ADF /* AroundDog */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A834BC84260332DB00226A5D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A83D55D22604E337007D10BC /* RegioncodeParam.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		A834BC85260332E600226A5D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				A83D55DB2604E5A1007D10BC /* Regioncode.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		A83A85012611DB490060698F /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A83D55C5260499F3007D10BC /* WalkingLocation */,
+				A8FBAFB62609E45D00416E6D /* Charactor */,
+				A806620526146AA900ADD43E /* Introduce */,
+				A83A85062611EB870060698F /* MyInfoViewController.swift */,
+				A83A85032611EB140060698F /* MyInfo.storyboard */,
+			);
+			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		A83D555A26034BDA007D10BC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A8FBAFBA2609E4C200416E6D /* DogProfileImage */,
+				A8288A082610764E00ECEDCF /* OnwerImage */,
+				A83D555B26034C62007D10BC /* ProfileViewController.swift */,
+				A83D555F26034C70007D10BC /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A83D558026034E9C007D10BC /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				A83D55822603BADA007D10BC /* Basic.storyboard */,
+				A83D55852603BAF9007D10BC /* MapViewController.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		A83D55C5260499F3007D10BC /* WalkingLocation */ = {
+			isa = PBXGroup;
+			children = (
+				A83D55C626049BBB007D10BC /* WalkingLocationViewController.swift */,
+				A83D55CE26049C3F007D10BC /* WalkingLocation.storyboard */,
+			);
+			path = WalkingLocation;
+			sourceTree = "<group>";
+		};
+		A8C03B26261867EC00257ADF /* FIndPeople */ = {
+			isa = PBXGroup;
+			children = (
+				A8C03B272618697800257ADF /* RegisteredUsersRegion.swift */,
+				A8C03B59261B818400257ADF /* DummyModel.swift */,
+				A8DA304926218CE100100748 /* AroundUserId.swift */,
+			);
+			path = FIndPeople;
+			sourceTree = "<group>";
+		};
+		A8C03B52261AF2DD00257ADF /* AroundDog */ = {
+			isa = PBXGroup;
+			children = (
+				A8C03B55261AF37C00257ADF /* AroundDogViewModel.swift */,
+			);
+			path = AroundDog;
+			sourceTree = "<group>";
+		};
 		A8C67BA925FF587A00D1966F = {
 			isa = PBXGroup;
 			children = (
 				A8C67BB425FF587A00D1966F /* GoTogeDog */,
 				A8C67BB325FF587A00D1966F /* Products */,
+				E12B09A5FDD499E11A2590D5 /* Pods */,
+				C0E6FB1ED8DD51470EF4FBBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +279,177 @@
 		A8C67BB425FF587A00D1966F /* GoTogeDog */ = {
 			isa = PBXGroup;
 			children = (
+				A8C67BF125FF5F1100D1966F /* Animation */,
+				A834BC5926032FF800226A5D /* Network */,
+				A8C67C5B25FFB6AF00D1966F /* Model */,
+				A834BC7F260332A300226A5D /* ViewModel */,
+				A8C67BD825FF5B3000D1966F /* Loding */,
+				A8C67BF225FF5F2300D1966F /* Login */,
+				A83D558026034E9C007D10BC /* Basic */,
+				A8C67C4325FF6D8300D1966F /* Tab */,
+				A8F64278261706A0004A4256 /* Trash */,
 				A8C67BB525FF587A00D1966F /* AppDelegate.swift */,
 				A8C67BB725FF587A00D1966F /* SceneDelegate.swift */,
-				A8C67BB925FF587A00D1966F /* ViewController.swift */,
-				A8C67BBB25FF587A00D1966F /* Main.storyboard */,
 				A8C67BBE25FF587B00D1966F /* Assets.xcassets */,
 				A8C67BC025FF587B00D1966F /* LaunchScreen.storyboard */,
 				A8C67BC325FF587B00D1966F /* Info.plist */,
+				A834BC5E260330B200226A5D /* GoogleService-Info.plist */,
 			);
 			path = GoTogeDog;
+			sourceTree = "<group>";
+		};
+		A8C67BD825FF5B3000D1966F /* Loding */ = {
+			isa = PBXGroup;
+			children = (
+				A8C67BD925FF5B3F00D1966F /* LodingViewController.swift */,
+				A8C67BDD25FF5B4700D1966F /* Loding.storyboard */,
+			);
+			path = Loding;
+			sourceTree = "<group>";
+		};
+		A8C67BF125FF5F1100D1966F /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A86A8A002608A6A700BB131F /* GotogeDog_Loding_Animation.json */,
+				A8C67BFA25FF64AC00D1966F /* Logo_Animation.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		A8C67BF225FF5F2300D1966F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A8C67BF325FF5F3300D1966F /* LoginViewController.swift */,
+				A8C67BF725FF5F3D00D1966F /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A8C67BFD25FF65D600D1966F /* AroundDog */ = {
+			isa = PBXGroup;
+			children = (
+				A8C67C1025FF674700D1966F /* AroundDog.storyboard */,
+				A8C67C1325FF675100D1966F /* AroundDogViewController.swift */,
+				A8C03B4E261AF06E00257ADF /* DogCell.swift */,
+			);
+			path = AroundDog;
+			sourceTree = "<group>";
+		};
+		A8C67C4325FF6D8300D1966F /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A8C67BFD25FF65D600D1966F /* AroundDog */,
+				A8C67C5025FF6E6100D1966F /* Chat */,
+				A83A85012611DB490060698F /* MyInfo */,
+				A8C67C4925FF6DE200D1966F /* MasterViewController.swift */,
+				A8C67C4C25FF6DFB00D1966F /* Master.storyboard */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		A8C67C5025FF6E6100D1966F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A8C67C5125FF6E8B00D1966F /* ChatViewController.swift */,
+				A8C67C5525FF6E9300D1966F /* Chat.storyboard */,
+				A8C67C5825FFB3D300D1966F /* ChatRoomCell.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A8C67C5B25FFB6AF00D1966F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A834BC84260332DB00226A5D /* Request */,
+				A834BC85260332E600226A5D /* Response */,
+				A8FBAFD1260CCE8200416E6D /* Login */,
+				A8C03B26261867EC00257ADF /* FIndPeople */,
+				A8FBAFCB260CCE2800416E6D /* Profile */,
+				A8FBAFD0260CCE7400416E6D /* Chat */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8F64278261706A0004A4256 /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				A8288A02261070A700ECEDCF /* ProfileViewModel.swift */,
+				A83D55DE2604EA4E007D10BC /* WalkingLocationViewModel.swift */,
+				A83D555A26034BDA007D10BC /* Profile */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		A8FBAFB62609E45D00416E6D /* Charactor */ = {
+			isa = PBXGroup;
+			children = (
+				A8069204261249A000AC4009 /* CharacterViewController.swift */,
+				A8F642A126172747004A4256 /* CharacterCell.swift */,
+				A8FBAFC5260CA81300416E6D /* Character.storyboard */,
+			);
+			path = Charactor;
+			sourceTree = "<group>";
+		};
+		A8FBAFBA2609E4C200416E6D /* DogProfileImage */ = {
+			isa = PBXGroup;
+			children = (
+				A8FBAFBC2609E53500416E6D /* DogProfileImageViewController.swift */,
+				A8119978260CE522001BCC49 /* DogImageCell.swift */,
+				A8119975260CE3BD001BCC49 /* DogProfileImage.storyboard */,
+			);
+			path = DogProfileImage;
+			sourceTree = "<group>";
+		};
+		A8FBAFCB260CCE2800416E6D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A8288A05261071AE00ECEDCF /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A8FBAFD0260CCE7400416E6D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A8C67C5C25FFB71700D1966F /* ChatRoom.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A8FBAFD1260CCE8200416E6D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A834BC86260332F700226A5D /* User.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A8FBAFD2260CCF0A00416E6D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A8FBAFC8260CC82D00416E6D /* CharacterViewModel.swift */,
+				A811997C260CECFF001BCC49 /* DogProfileViewModel.swift */,
+				A83A84FB26107ED20060698F /* OnwerImageViewModel.swift */,
+				A8C03B2326185D3500257ADF /* WalkLoctionViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C0E6FB1ED8DD51470EF4FBBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D14592906B961BF8753A159 /* Pods_GoTogeDog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E12B09A5FDD499E11A2590D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6002E416821C848B06E9CA4 /* Pods-GoTogeDog.debug.xcconfig */,
+				F1D85FED75D3ADB5E13AA9CB /* Pods-GoTogeDog.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +459,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8C67BC625FF587B00D1966F /* Build configuration list for PBXNativeTarget "GoTogeDog" */;
 			buildPhases = (
+				5350C6BE90BDB0E39BD45DE1 /* [CP] Check Pods Manifest.lock */,
 				A8C67BAE25FF587A00D1966F /* Sources */,
 				A8C67BAF25FF587A00D1966F /* Frameworks */,
 				A8C67BB025FF587A00D1966F /* Resources */,
+				940C790741E0FCBE74EB6731 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,36 +511,121 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86A8A012608A6A700BB131F /* GotogeDog_Loding_Animation.json in Resources */,
+				A8119976260CE3BD001BCC49 /* DogProfileImage.storyboard in Resources */,
+				A8C67C5625FF6E9300D1966F /* Chat.storyboard in Resources */,
+				A83D55832603BADA007D10BC /* Basic.storyboard in Resources */,
+				A806620A26146ACC00ADD43E /* Introduce.storyboard in Resources */,
+				A83D556026034C70007D10BC /* Profile.storyboard in Resources */,
+				A8C67C1125FF674700D1966F /* AroundDog.storyboard in Resources */,
+				A8C67BFB25FF64AC00D1966F /* Logo_Animation.json in Resources */,
 				A8C67BC225FF587B00D1966F /* LaunchScreen.storyboard in Resources */,
+				A83A85042611EB140060698F /* MyInfo.storyboard in Resources */,
+				A8C67C4D25FF6DFB00D1966F /* Master.storyboard in Resources */,
+				A8FBAFC6260CA81300416E6D /* Character.storyboard in Resources */,
+				A8288A0D2610768500ECEDCF /* OnwerImage.storyboard in Resources */,
+				A8C67BF825FF5F3D00D1966F /* Login.storyboard in Resources */,
+				A834BC5F260330B200226A5D /* GoogleService-Info.plist in Resources */,
+				A83D55CF26049C3F007D10BC /* WalkingLocation.storyboard in Resources */,
+				A8C67BDE25FF5B4700D1966F /* Loding.storyboard in Resources */,
 				A8C67BBF25FF587B00D1966F /* Assets.xcassets in Resources */,
-				A8C67BBD25FF587A00D1966F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5350C6BE90BDB0E39BD45DE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoTogeDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		940C790741E0FCBE74EB6731 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoTogeDog/Pods-GoTogeDog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoTogeDog/Pods-GoTogeDog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoTogeDog/Pods-GoTogeDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8C67BAE25FF587A00D1966F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8C67BBA25FF587A00D1966F /* ViewController.swift in Sources */,
+				A8C03B56261AF37C00257ADF /* AroundDogViewModel.swift in Sources */,
+				A8C67C5D25FFB71700D1966F /* ChatRoom.swift in Sources */,
+				A8C67BDA25FF5B3F00D1966F /* LodingViewController.swift in Sources */,
+				A8C03B282618697800257ADF /* RegisteredUsersRegion.swift in Sources */,
+				A834BC5B2603300C00226A5D /* FirebaseManager.swift in Sources */,
+				A8F642A226172747004A4256 /* CharacterCell.swift in Sources */,
+				A8069205261249A000AC4009 /* CharacterViewController.swift in Sources */,
+				A8C03B4F261AF06E00257ADF /* DogCell.swift in Sources */,
 				A8C67BB625FF587A00D1966F /* AppDelegate.swift in Sources */,
+				A8C67C5925FFB3D300D1966F /* ChatRoomCell.swift in Sources */,
+				A8DA304A26218CE100100748 /* AroundUserId.swift in Sources */,
+				A83A85072611EB870060698F /* MyInfoViewController.swift in Sources */,
+				A8288A0A2610767800ECEDCF /* OnwerImageViewController.swift in Sources */,
+				A8C67C4A25FF6DE200D1966F /* MasterViewController.swift in Sources */,
+				A83A84F926107D4C0060698F /* OnwerImageCell.swift in Sources */,
+				A811997D260CECFF001BCC49 /* DogProfileViewModel.swift in Sources */,
+				A806620726146AC300ADD43E /* IntroduceViewController.swift in Sources */,
+				A8FBAFC9260CC82D00416E6D /* CharacterViewModel.swift in Sources */,
+				A83D55DC2604E5A1007D10BC /* Regioncode.swift in Sources */,
+				A8288A03261070A700ECEDCF /* ProfileViewModel.swift in Sources */,
+				A8C67C5225FF6E8B00D1966F /* ChatViewController.swift in Sources */,
+				A8C67BF425FF5F3300D1966F /* LoginViewController.swift in Sources */,
+				A83D55DF2604EA4E007D10BC /* WalkingLocationViewModel.swift in Sources */,
+				A834BC87260332F700226A5D /* User.swift in Sources */,
+				A8FBAFBD2609E53500416E6D /* DogProfileImageViewController.swift in Sources */,
 				A8C67BB825FF587A00D1966F /* SceneDelegate.swift in Sources */,
+				A83D55D32604E337007D10BC /* RegioncodeParam.swift in Sources */,
+				A83A84FC26107ED20060698F /* OnwerImageViewModel.swift in Sources */,
+				A83D55D82604E3DF007D10BC /* KakaoAPIManager.swift in Sources */,
+				A83D555C26034C62007D10BC /* ProfileViewController.swift in Sources */,
+				A8119979260CE522001BCC49 /* DogImageCell.swift in Sources */,
+				A8C03B5A261B818400257ADF /* DummyModel.swift in Sources */,
+				A83D55C726049BBB007D10BC /* WalkingLocationViewController.swift in Sources */,
+				A8C67C1425FF675100D1966F /* AroundDogViewController.swift in Sources */,
+				A834BC81260332B800226A5D /* UserInfoManager.swift in Sources */,
+				A83A84FF2610F6D20060698F /* FirebaseStorageManager.swift in Sources */,
+				A8288A06261071AE00ECEDCF /* Profile.swift in Sources */,
+				A8C03B2426185D3500257ADF /* WalkLoctionViewModel.swift in Sources */,
+				A83D55862603BAF9007D10BC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A8C67BBB25FF587A00D1966F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8C67BBC25FF587A00D1966F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A8C67BC025FF587B00D1966F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +755,7 @@
 		};
 		A8C67BC725FF587B00D1966F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6002E416821C848B06E9CA4 /* Pods-GoTogeDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +775,7 @@
 		};
 		A8C67BC825FF587B00D1966F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D85FED75D3ADB5E13AA9CB /* Pods-GoTogeDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

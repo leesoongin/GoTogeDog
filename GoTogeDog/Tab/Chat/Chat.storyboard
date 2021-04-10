@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yoJ-fo-bfl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="Hxj-Ry-4IS">
+            <objects>
+                <viewController storyboardIdentifier="Chat" id="yoJ-fo-bfl" customClass="ChatViewController" customModule="GoTogeDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VAC-Oz-UwS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Adn-Go-iRd">
+                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatRoomCell" rowHeight="80" id="kPo-LN-qhz" customClass="ChatRoomCell" customModule="GoTogeDog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kPo-LN-qhz" id="WIA-Zv-E2C">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGC-6N-5fj">
+                                                    <rect key="frame" x="8" y="5" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="u2h-98-8yy"/>
+                                                        <constraint firstAttribute="width" constant="70" id="zTK-Am-0ls"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이숭인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POS-MI-ubC">
+                                                    <rect key="frame" x="94" y="16" width="49.5" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="eCb-Sc-cQL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ㅋㅋㅋㅋㅋ마지막 메세지야 ㅎㅎ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAr-11-j5W" userLabel="하지만">
+                                                    <rect key="frame" x="94" y="40" width="177.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="k3Z-6v-iCR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="POS-MI-ubC" firstAttribute="leading" secondItem="IGC-6N-5fj" secondAttribute="trailing" constant="16" id="CMU-kb-yyu"/>
+                                                <constraint firstItem="IGC-6N-5fj" firstAttribute="leading" secondItem="WIA-Zv-E2C" secondAttribute="leading" constant="8" id="Kdj-4o-hb6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OAr-11-j5W" secondAttribute="bottom" constant="8" id="UNM-WG-CJs"/>
+                                                <constraint firstItem="OAr-11-j5W" firstAttribute="top" secondItem="POS-MI-ubC" secondAttribute="bottom" constant="8" id="oJ3-2i-evZ"/>
+                                                <constraint firstItem="OAr-11-j5W" firstAttribute="leading" secondItem="IGC-6N-5fj" secondAttribute="trailing" constant="16" id="vCd-yI-oKL"/>
+                                                <constraint firstItem="POS-MI-ubC" firstAttribute="top" secondItem="WIA-Zv-E2C" secondAttribute="top" constant="16" id="w9V-rw-oXY"/>
+                                                <constraint firstItem="IGC-6N-5fj" firstAttribute="centerY" secondItem="WIA-Zv-E2C" secondAttribute="centerY" id="wu6-9d-QXL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastMessageLabel" destination="OAr-11-j5W" id="KF7-QB-IWT"/>
+                                            <outlet property="nameLabel" destination="POS-MI-ubC" id="rHc-FQ-4IQ"/>
+                                            <outlet property="profile_image" destination="IGC-6N-5fj" id="PN8-OA-91m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yoJ-fo-bfl" id="vwq-Qu-ZX7"/>
+                                    <outlet property="delegate" destination="yoJ-fo-bfl" id="sif-a5-asK"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pQ-33-b8X">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="채팅방" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGu-ve-GxT">
+                                        <rect key="frame" x="16" y="8" width="52" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkn-Rr-cI5">
+                                        <rect key="frame" x="352" y="8" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="moveToProfile:" destination="yoJ-fo-bfl" eventType="touchUpInside" id="238-7q-hmV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2X3-3w-JA2"/>
+                                    <constraint firstItem="rkn-Rr-cI5" firstAttribute="top" secondItem="5pQ-33-b8X" secondAttribute="top" constant="8" id="6qf-LM-pt6"/>
+                                    <constraint firstAttribute="trailing" secondItem="rkn-Rr-cI5" secondAttribute="trailing" constant="16" id="9h9-40-Vf6"/>
+                                    <constraint firstItem="pGu-ve-GxT" firstAttribute="leading" secondItem="5pQ-33-b8X" secondAttribute="leading" constant="16" id="KvL-zV-OlL"/>
+                                    <constraint firstItem="pGu-ve-GxT" firstAttribute="top" secondItem="5pQ-33-b8X" secondAttribute="top" constant="8" id="Tbq-FW-FhB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v0v-J4-O4h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5pQ-33-b8X" firstAttribute="top" secondItem="v0v-J4-O4h" secondAttribute="top" id="1mc-0Z-kt9"/>
+                            <constraint firstItem="Adn-Go-iRd" firstAttribute="top" secondItem="5pQ-33-b8X" secondAttribute="bottom" id="FxK-CK-m4F"/>
+                            <constraint firstItem="v0v-J4-O4h" firstAttribute="bottom" secondItem="Adn-Go-iRd" secondAttribute="bottom" id="Qbh-lC-AUZ"/>
+                            <constraint firstItem="v0v-J4-O4h" firstAttribute="trailing" secondItem="Adn-Go-iRd" secondAttribute="trailing" id="dWq-Hd-9di"/>
+                            <constraint firstItem="Adn-Go-iRd" firstAttribute="leading" secondItem="v0v-J4-O4h" secondAttribute="leading" id="m81-hN-1ik"/>
+                            <constraint firstItem="v0v-J4-O4h" firstAttribute="trailing" secondItem="5pQ-33-b8X" secondAttribute="trailing" id="sSU-1t-hC9"/>
+                            <constraint firstItem="5pQ-33-b8X" firstAttribute="leading" secondItem="v0v-J4-O4h" secondAttribute="leading" id="y6n-K3-oLg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="message" catalog="system" selectedImage="message.fill" id="bIy-rW-97f"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xdy-LI-rfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.69565217391306" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

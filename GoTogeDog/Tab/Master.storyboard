@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sf3-iK-7a7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master View Controller-->
+        <scene sceneID="vZq-eK-Vqk">
+            <objects>
+                <tabBarController storyboardIdentifier="Master" id="sf3-iK-7a7" customClass="MasterViewController" customModule="GoTogeDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eHq-zh-2j9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Mhh-eG-s5F" kind="relationship" relationship="viewControllers" id="Wur-Yo-mkU"/>
+                        <segue destination="Pkj-cG-cQS" kind="relationship" relationship="viewControllers" id="Kcx-Pd-G59"/>
+                        <segue destination="0hh-4W-cDm" kind="relationship" relationship="viewControllers" id="pqN-01-vrt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhH-mJ-LTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781" y="-170"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="lNC-Nj-5p1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="Chat" id="Mhh-eG-s5F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="sdfdsf" image="message" catalog="system" selectedImage="message.fill" id="nDY-eu-vk9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMJ-A3-DmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-182" y="-415"/>
+        </scene>
+        <!--AroundDog-->
+        <scene sceneID="bCB-NQ-Ba3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AroundDog" referencedIdentifier="AroundDog" id="Pkj-cG-cQS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass.circle" catalog="system" selectedImage="magnifyingglass.circle.fill" id="vTH-oC-mVz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xv-RQ-uzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="-170"/>
+        </scene>
+        <!--MyInfo-->
+        <scene sceneID="HqS-2N-Pdt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyInfo" referencedIdentifier="MyInfo" id="0hh-4W-cDm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zXf-AC-Yw8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXH-Si-ev6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
