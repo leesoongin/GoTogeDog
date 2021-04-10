@@ -33,18 +33,19 @@ class AroundDogViewController: UIViewController {
         super.viewWillAppear(true)
         
         firebaseManager.loadProfileWalkingLocation(id: userInfoManager.userInfo["id"]!) { response in
+            self.firebaseManager.loadAroundUserId(region: response) { users in
+                for user in users{
+                    self.firebaseManager.loadAroundUserInfo(id: user.id) { response in
+                        //여기서 뷰모델로 받아서 리스트 저장하고 띄우자. 휴!
+                        print("user --> \(user) , response --> \(response)")
+                    }
+                }
+            }
             DispatchQueue.main.async {
                 self.addressLabel.text = response.region_1depth_name +
                     " " + response.region_2depth_name
                 print("\(self.addressLabel.text)")
             }
-            self.firebaseManager.loadAroundUserId(region: response) { response in
-                for user in response{
-                    //여기서 유저한명당의 정보를 불러오기
-                    self.firebaseManager.loadAroundUserInfo(id: "1")
-                }
-            }
-        
         }
     }
     

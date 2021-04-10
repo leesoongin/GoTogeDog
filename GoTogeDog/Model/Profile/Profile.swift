@@ -8,18 +8,18 @@
 import UIKit
 
 struct Profile : Codable {
-    var walkLocation : Document
-    var dog : DogInfo
-    var dogImages : DogImages
-    var owner : OwnerInfo
-    var ownerImages : OwnerImages
+    var WalkLocation : Document
+    var Dog : DogInfo
+    var DogImages : DogImages
+    var Owner : OwnerInfo
+    var OwnerImages : OwnerImages
     
     init(walkLocation : Document, dog : DogInfo, dogImages : DogImages, owner : OwnerInfo, ownerImages : OwnerImages){
-        self.walkLocation = walkLocation
-        self.dog = dog
-        self.dogImages = dogImages
-        self.owner = owner
-        self.ownerImages = ownerImages
+        self.WalkLocation = walkLocation
+        self.Dog = dog
+        self.DogImages = dogImages
+        self.Owner = owner
+        self.OwnerImages = ownerImages
     }
 }
 

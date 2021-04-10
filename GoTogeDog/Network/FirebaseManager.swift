@@ -94,6 +94,7 @@ class FirebaseManager {
                 print("don't have review data")
                 return
             }
+            
             do{
                 let jsonData = try JSONSerialization.data(withJSONObject: snapshot.value!, options: [])
                 let json = try JSONDecoder().decode(DogImages.self, from: jsonData)
@@ -171,24 +172,59 @@ class FirebaseManager {
         }
     }
     
-    func loadAroundUserInfo(id : String){
-        
+    func loadAroundUserInfo(id : String, completion : @escaping (Profile)->(Void)){
         db.child("Profile").child("\(id)").observeSingleEvent(of: .value) { snapshot in
             if !snapshot.hasChildren()  {
                 //데이터가 없으면 해야할 행동
                 print("don't have review data")
                 return
             }
+            
+            let dict = snapshot.value! as? [String:Any] ?? [:]
+            var dogs = [String : Any]()
+            var ownerImages = [String : Any]()
+            var owner = [String : Any]()
+            var walkLocation = [String : Any]()
+            var dogImages = [String : Any]()
+            
+            for key in dict.keys {
+                switch key {
+                case "Dog":
+                    dogs = dict[key] as! [String : Any]
+                case "OwnerImages":
+                    ownerImages = dict[key] as! [String : Any]
+                case "Owner":
+                    owner = dict[key] as! [String : Any]
+                case "WalkLocation":
+                    walkLocation = dict[key] as! [String : Any]
+                case "DogImages":
+                    dogImages = dict[key] as! [String : Any]
+                default:
+                    print("나오면 앙대!")
+                }
+            }
+            
             do{
-                let jsonData = try JSONSerialization.data(withJSONObject: snapshot.value!, options: [])
-                let test = String(data: jsonData, encoding: String.Encoding.utf8)
-                print("test --> \(test)")
-//                let json = try JSONDecoder().decode(Profile.self, from: jsonData)
-//                print("json --> \(json)")
+                let dogJson = try JSONSerialization.data(withJSONObject: dogs, options: [])
+                let ownerImagesJson = try JSONSerialization.data(withJSONObject: ownerImages, options: [])
+                let ownerJson = try JSONSerialization.data(withJSONObject: owner, options: [])
+                let walkLocationJson = try JSONSerialization.data(withJSONObject: walkLocation, options: [])
+                let dogImagesJson = try JSONSerialization.data(withJSONObject: dogImages, options: [])
+                
+                let dogJsonData = try JSONDecoder().decode(DogInfo.self, from: dogJson)
+                let ownerImagesJsonData = try JSONDecoder().decode(OwnerImages.self, from: ownerImagesJson)
+                let ownerJsonData = try JSONDecoder().decode(OwnerInfo.self, from: ownerJson)
+                let walkLocationJsonData = try JSONDecoder().decode(Document.self, from: walkLocationJson)
+                let dogImagesJsonData = try JSONDecoder().decode(DogImages.self, from: dogImagesJson)
+                
+//                print("dog --< \(dogJsonData), ownerImage --> \(ownerImagesJsonData), owner --> \(ownerJsonData), walkLocation --> \(walkLocationJsonData), dogImages --> \(dogImagesJsonData)")
+                
+                var profile = Profile(walkLocation: walkLocationJsonData, dog: dogJsonData, dogImages: dogImagesJsonData, owner: ownerJsonData, ownerImages: ownerImagesJsonData)
+                completion(profile)
             }catch let error{
                 print("parsed error --> \(error.localizedDescription)")
             }
         }
-        
     }
 }
+
