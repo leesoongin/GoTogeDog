@@ -11,33 +11,26 @@ class AroundDogViewController: UIViewController {
    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var addressLabel: UILabel!
-    // 프로필에 저장된 유저의 주소 depth_2 로 검색해와서 collectionView에다 채워넣자
     
+    let aroundDogViewModel = AroundDogViewModel.shared
     let firebaseManager = FirebaseManager.shared
     let userInfoManager = UserInfoManager.shared
-    
-    let dummyData : [DummyModel] = [
-        DummyModel(name: "둥지1", age: "1", kind: "요크", address: "서울시 성북구 보문동", imageUrl: "https://firebasestorage.googleapis.com/v0/b/gotogedog.appspot.com/o/dogImages%2F1662466396%2F%3CUIImage:0x2825bc2d0%20anonymous%20%7B1410,%201411%7D%3E?alt=media&token=74e4c495-c5f6-4682-baed-ef57b688fc0b"),
-        DummyModel(name: "둥지2", age: "2", kind: "요크", address: "서울시 성북구 숭인동", imageUrl: "https://firebasestorage.googleapis.com/v0/b/gotogedog.appspot.com/o/dogImages%2F1662466396%2F%3CUIImage:0x2825bc2d0%20anonymous%20%7B1410,%201411%7D%3E?alt=media&token=74e4c495-c5f6-4682-baed-ef57b688fc0b"),
-        DummyModel(name: "둥지3", age: "3", kind: "요크", address: "서울시 성북구 안암동", imageUrl: "https://firebasestorage.googleapis.com/v0/b/gotogedog.appspot.com/o/dogImages%2F1662466396%2F%3CUIImage:0x2825bc2d0%20anonymous%20%7B1410,%201411%7D%3E?alt=media&token=74e4c495-c5f6-4682-baed-ef57b688fc0b"),
-        DummyModel(name: "둥지4", age: "4", kind: "요크", address: "서울시 성북구 돈암동", imageUrl: "https://firebasestorage.googleapis.com/v0/b/gotogedog.appspot.com/o/dogImages%2F1662466396%2F%3CUIImage:0x2825bc2d0%20anonymous%20%7B1410,%201411%7D%3E?alt=media&token=74e4c495-c5f6-4682-baed-ef57b688fc0b"),
-        DummyModel(name: "둥지5", age: "5", kind: "요크", address: "서울시 성북구 숭인1동", imageUrl: "https://firebasestorage.googleapis.com/v0/b/gotogedog.appspot.com/o/dogImages%2F1662466396%2F%3CUIImage:0x2825bc2d0%20anonymous%20%7B1410,%201411%7D%3E?alt=media&token=74e4c495-c5f6-4682-baed-ef57b688fc0b"),
-        DummyModel(name: "둥지6", age: "6", kind: "요크", address: "서울시 성북구 숭인2동", imageUrl: "https://firebasestorage.googleapis.com/v0/b/gotogedog.appspot.com/o/dogImages%2F1662466396%2F%3CUIImage:0x2825bc2d0%20anonymous%20%7B1410,%201411%7D%3E?alt=media&token=74e4c495-c5f6-4682-baed-ef57b688fc0b")
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
          initViews()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
         firebaseManager.loadProfileWalkingLocation(id: userInfoManager.userInfo["id"]!) { response in
             self.firebaseManager.loadAroundUserId(region: response) { users in
                 for user in users{
                     self.firebaseManager.loadAroundUserInfo(id: user.id) { response in
-                        //여기서 뷰모델로 받아서 리스트 저장하고 띄우자. 휴!
-                        print("user --> \(user) , response --> \(response)")
+                        //받아온 유저들의 정보를 list형태로 저장
+                        let card = AroundUserCard(id: user.id, profile: response)
+                        self.aroundDogViewModel.addCard(card: card)
+                        
+                        if user.id == users.last?.id{ // 마지막 데이터 로드라면 데이터 reload
+                            self.collectionView.reloadData()
+                            print("---> \(self.aroundDogViewModel.userCards)")
+                        }
                     }
                 }
             }
@@ -48,7 +41,10 @@ class AroundDogViewController: UIViewController {
             }
         }
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+    }
     
     func initViews(){
         addressLabel.layer.cornerRadius = 10
@@ -58,15 +54,15 @@ class AroundDogViewController: UIViewController {
 extension AroundDogViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //이 지역에 등록된 유저의 수만큼 return
-        return dummyData.count
+        return self.aroundDogViewModel.userCards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dogCell", for: indexPath) as? DogCell else {
             return UICollectionViewCell()
         }
-        let dummyData = self.dummyData[indexPath.row]
-        cell.configure(name: dummyData.name, kind: dummyData.kind, age: dummyData.age, address: dummyData.address, imageUrl: dummyData.imageUrl)
+        let data = self.aroundDogViewModel.userCards[indexPath.row]
+        cell.configure(dogName: data.profile.Dog.name, kind: data.profile.Dog.kind, dogAge: data.profile.Dog.age, address: data.profile.WalkLocation.address_name, dogImageUrl: data.profile.DogImages.imageUrls.first!)
         
         return cell
     }
@@ -74,6 +70,13 @@ extension AroundDogViewController : UICollectionViewDataSource {
 
 extension AroundDogViewController : UICollectionViewDelegate {
     //터치시 상세화면으로 이동
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "AroundCardDetail", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! AroundCardDetailViewController
+        presentPanModal(vc)
+
+        NotificationCenter.default.post(name: NSNotification.Name.getUserCard, object: self.aroundDogViewModel.userCards[indexPath.row])
+    }
 }
 
 

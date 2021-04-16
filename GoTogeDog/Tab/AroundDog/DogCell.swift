@@ -27,12 +27,12 @@ class DogCell: UICollectionViewCell {
         setup()
     }
     
-    func configure(name : String, kind : String, age : String, address : String, imageUrl : String){
-        self.nameLabel.text = name
+    func configure(dogName : String, kind : String, dogAge : String, address : String, dogImageUrl : String){
+        self.nameLabel.text = dogName
         self.kindLabel.text = kind
-        self.ageLabel.text = age
+        self.ageLabel.text = dogAge
         self.addressLabel.text = address
-        self.imageView.kf.setImage(with: URL(string: imageUrl))
+        self.imageView.kf.setImage(with: URL(string: dogImageUrl))
     }
     
     private func setup(){

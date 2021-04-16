@@ -36,12 +36,14 @@
 		A83D55D82604E3DF007D10BC /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55D72604E3DF007D10BC /* KakaoAPIManager.swift */; };
 		A83D55DC2604E5A1007D10BC /* Regioncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55DB2604E5A1007D10BC /* Regioncode.swift */; };
 		A83D55DF2604EA4E007D10BC /* WalkingLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D55DE2604EA4E007D10BC /* WalkingLocationViewModel.swift */; };
+		A85F8EC72624907D003C1696 /* AroundUserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F8EC62624907D003C1696 /* AroundUserCard.swift */; };
+		A85F8ECC26249EC3003C1696 /* AroundCardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F8ECB26249EC3003C1696 /* AroundCardDetailViewController.swift */; };
+		A85F8ED326249FA8003C1696 /* AroundCardDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85F8ED226249FA8003C1696 /* AroundCardDetail.storyboard */; };
 		A86A8A012608A6A700BB131F /* GotogeDog_Loding_Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = A86A8A002608A6A700BB131F /* GotogeDog_Loding_Animation.json */; };
+		A8A2B170262830EC00A4EB31 /* AroundCardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A2B16F262830EC00A4EB31 /* AroundCardDetailViewModel.swift */; };
 		A8C03B2426185D3500257ADF /* WalkLoctionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B2326185D3500257ADF /* WalkLoctionViewModel.swift */; };
-		A8C03B282618697800257ADF /* RegisteredUsersRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B272618697800257ADF /* RegisteredUsersRegion.swift */; };
 		A8C03B4F261AF06E00257ADF /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B4E261AF06E00257ADF /* DogCell.swift */; };
 		A8C03B56261AF37C00257ADF /* AroundDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B55261AF37C00257ADF /* AroundDogViewModel.swift */; };
-		A8C03B5A261B818400257ADF /* DummyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C03B59261B818400257ADF /* DummyModel.swift */; };
 		A8C67BB625FF587A00D1966F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67BB525FF587A00D1966F /* AppDelegate.swift */; };
 		A8C67BB825FF587A00D1966F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67BB725FF587A00D1966F /* SceneDelegate.swift */; };
 		A8C67BBF25FF587B00D1966F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C67BBE25FF587B00D1966F /* Assets.xcassets */; };
@@ -98,12 +100,14 @@
 		A83D55D72604E3DF007D10BC /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
 		A83D55DB2604E5A1007D10BC /* Regioncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regioncode.swift; sourceTree = "<group>"; };
 		A83D55DE2604EA4E007D10BC /* WalkingLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingLocationViewModel.swift; sourceTree = "<group>"; };
+		A85F8EC62624907D003C1696 /* AroundUserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundUserCard.swift; sourceTree = "<group>"; };
+		A85F8ECB26249EC3003C1696 /* AroundCardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundCardDetailViewController.swift; sourceTree = "<group>"; };
+		A85F8ED226249FA8003C1696 /* AroundCardDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AroundCardDetail.storyboard; sourceTree = "<group>"; };
 		A86A8A002608A6A700BB131F /* GotogeDog_Loding_Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GotogeDog_Loding_Animation.json; sourceTree = "<group>"; };
+		A8A2B16F262830EC00A4EB31 /* AroundCardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundCardDetailViewModel.swift; sourceTree = "<group>"; };
 		A8C03B2326185D3500257ADF /* WalkLoctionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkLoctionViewModel.swift; sourceTree = "<group>"; };
-		A8C03B272618697800257ADF /* RegisteredUsersRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredUsersRegion.swift; sourceTree = "<group>"; };
 		A8C03B4E261AF06E00257ADF /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
 		A8C03B55261AF37C00257ADF /* AroundDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundDogViewModel.swift; sourceTree = "<group>"; };
-		A8C03B59261B818400257ADF /* DummyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyModel.swift; sourceTree = "<group>"; };
 		A8C67BB225FF587A00D1966F /* GoTogeDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTogeDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C67BB525FF587A00D1966F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C67BB725FF587A00D1966F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,20 +244,29 @@
 			path = WalkingLocation;
 			sourceTree = "<group>";
 		};
-		A8C03B26261867EC00257ADF /* FIndPeople */ = {
+		A85F8ECA26249E9E003C1696 /* AroundCardDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				A8C03B272618697800257ADF /* RegisteredUsersRegion.swift */,
-				A8C03B59261B818400257ADF /* DummyModel.swift */,
-				A8DA304926218CE100100748 /* AroundUserId.swift */,
+				A85F8ECB26249EC3003C1696 /* AroundCardDetailViewController.swift */,
+				A85F8ED226249FA8003C1696 /* AroundCardDetail.storyboard */,
 			);
-			path = FIndPeople;
+			path = AroundCardDetailView;
+			sourceTree = "<group>";
+		};
+		A8C03B26261867EC00257ADF /* AroundDog */ = {
+			isa = PBXGroup;
+			children = (
+				A8DA304926218CE100100748 /* AroundUserId.swift */,
+				A85F8EC62624907D003C1696 /* AroundUserCard.swift */,
+			);
+			path = AroundDog;
 			sourceTree = "<group>";
 		};
 		A8C03B52261AF2DD00257ADF /* AroundDog */ = {
 			isa = PBXGroup;
 			children = (
 				A8C03B55261AF37C00257ADF /* AroundDogViewModel.swift */,
+				A8A2B16F262830EC00A4EB31 /* AroundCardDetailViewModel.swift */,
 			);
 			path = AroundDog;
 			sourceTree = "<group>";
@@ -328,9 +341,10 @@
 		A8C67BFD25FF65D600D1966F /* AroundDog */ = {
 			isa = PBXGroup;
 			children = (
-				A8C67C1025FF674700D1966F /* AroundDog.storyboard */,
+				A85F8ECA26249E9E003C1696 /* AroundCardDetailView */,
 				A8C67C1325FF675100D1966F /* AroundDogViewController.swift */,
 				A8C03B4E261AF06E00257ADF /* DogCell.swift */,
+				A8C67C1025FF674700D1966F /* AroundDog.storyboard */,
 			);
 			path = AroundDog;
 			sourceTree = "<group>";
@@ -363,7 +377,7 @@
 				A834BC84260332DB00226A5D /* Request */,
 				A834BC85260332E600226A5D /* Response */,
 				A8FBAFD1260CCE8200416E6D /* Login */,
-				A8C03B26261867EC00257ADF /* FIndPeople */,
+				A8C03B26261867EC00257ADF /* AroundDog */,
 				A8FBAFCB260CCE2800416E6D /* Profile */,
 				A8FBAFD0260CCE7400416E6D /* Chat */,
 			);
@@ -511,6 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85F8ED326249FA8003C1696 /* AroundCardDetail.storyboard in Resources */,
 				A86A8A012608A6A700BB131F /* GotogeDog_Loding_Animation.json in Resources */,
 				A8119976260CE3BD001BCC49 /* DogProfileImage.storyboard in Resources */,
 				A8C67C5625FF6E9300D1966F /* Chat.storyboard in Resources */,
@@ -581,10 +596,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85F8ECC26249EC3003C1696 /* AroundCardDetailViewController.swift in Sources */,
 				A8C03B56261AF37C00257ADF /* AroundDogViewModel.swift in Sources */,
 				A8C67C5D25FFB71700D1966F /* ChatRoom.swift in Sources */,
 				A8C67BDA25FF5B3F00D1966F /* LodingViewController.swift in Sources */,
-				A8C03B282618697800257ADF /* RegisteredUsersRegion.swift in Sources */,
 				A834BC5B2603300C00226A5D /* FirebaseManager.swift in Sources */,
 				A8F642A226172747004A4256 /* CharacterCell.swift in Sources */,
 				A8069205261249A000AC4009 /* CharacterViewController.swift in Sources */,
@@ -593,9 +608,11 @@
 				A8C67C5925FFB3D300D1966F /* ChatRoomCell.swift in Sources */,
 				A8DA304A26218CE100100748 /* AroundUserId.swift in Sources */,
 				A83A85072611EB870060698F /* MyInfoViewController.swift in Sources */,
+				A8A2B170262830EC00A4EB31 /* AroundCardDetailViewModel.swift in Sources */,
 				A8288A0A2610767800ECEDCF /* OnwerImageViewController.swift in Sources */,
 				A8C67C4A25FF6DE200D1966F /* MasterViewController.swift in Sources */,
 				A83A84F926107D4C0060698F /* OnwerImageCell.swift in Sources */,
+				A85F8EC72624907D003C1696 /* AroundUserCard.swift in Sources */,
 				A811997D260CECFF001BCC49 /* DogProfileViewModel.swift in Sources */,
 				A806620726146AC300ADD43E /* IntroduceViewController.swift in Sources */,
 				A8FBAFC9260CC82D00416E6D /* CharacterViewModel.swift in Sources */,
@@ -612,7 +629,6 @@
 				A83D55D82604E3DF007D10BC /* KakaoAPIManager.swift in Sources */,
 				A83D555C26034C62007D10BC /* ProfileViewController.swift in Sources */,
 				A8119979260CE522001BCC49 /* DogImageCell.swift in Sources */,
-				A8C03B5A261B818400257ADF /* DummyModel.swift in Sources */,
 				A83D55C726049BBB007D10BC /* WalkingLocationViewController.swift in Sources */,
 				A8C67C1425FF675100D1966F /* AroundDogViewController.swift in Sources */,
 				A834BC81260332B800226A5D /* UserInfoManager.swift in Sources */,

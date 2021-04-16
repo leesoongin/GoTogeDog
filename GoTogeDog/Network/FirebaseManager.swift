@@ -217,9 +217,7 @@ class FirebaseManager {
                 let walkLocationJsonData = try JSONDecoder().decode(Document.self, from: walkLocationJson)
                 let dogImagesJsonData = try JSONDecoder().decode(DogImages.self, from: dogImagesJson)
                 
-//                print("dog --< \(dogJsonData), ownerImage --> \(ownerImagesJsonData), owner --> \(ownerJsonData), walkLocation --> \(walkLocationJsonData), dogImages --> \(dogImagesJsonData)")
-                
-                var profile = Profile(walkLocation: walkLocationJsonData, dog: dogJsonData, dogImages: dogImagesJsonData, owner: ownerJsonData, ownerImages: ownerImagesJsonData)
+                let profile = Profile(walkLocation: walkLocationJsonData, dog: dogJsonData, dogImages: dogImagesJsonData, owner: ownerJsonData, ownerImages: ownerImagesJsonData)
                 completion(profile)
             }catch let error{
                 print("parsed error --> \(error.localizedDescription)")
