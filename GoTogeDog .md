@@ -18,7 +18,7 @@
 
 - **프로필 설정화면, 채팅방 화면**
 
-![이미지 5](https://user-images.githubusercontent.com/55231029/120975970-d5311c80-c7ac-11eb-9031-7cadbbd3eccc.GIF)
+<p>![이미지 5](https://user-images.githubusercontent.com/55231029/120975970-d5311c80-c7ac-11eb-9031-7cadbbd3eccc.GIF)
 
 - **반려견 프로필설정**
 
@@ -32,7 +32,7 @@
 
 ![이미지 3](https://user-images.githubusercontent.com/55231029/120974378-03adf800-c7ab-11eb-9650-9295785a21bc.GIF)
 - **상세 프로필**
-
+</p>
 
 ## 주요기능
 
