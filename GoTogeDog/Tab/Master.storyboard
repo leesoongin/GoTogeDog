@@ -19,6 +19,7 @@
                         <segue destination="Mhh-eG-s5F" kind="relationship" relationship="viewControllers" id="Wur-Yo-mkU"/>
                         <segue destination="Pkj-cG-cQS" kind="relationship" relationship="viewControllers" id="Kcx-Pd-G59"/>
                         <segue destination="0hh-4W-cDm" kind="relationship" relationship="viewControllers" id="pqN-01-vrt"/>
+                        <segue destination="N5z-N7-LiJ" kind="relationship" relationship="viewControllers" id="S4A-YM-Wv5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhH-mJ-LTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,6 +46,16 @@
             </objects>
             <point key="canvasLocation" x="-183" y="-170"/>
         </scene>
+        <!--Alarm-->
+        <scene sceneID="diX-VW-sDk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Alarm" referencedIdentifier="Alarm" id="N5z-N7-LiJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="alarm" catalog="system" selectedImage="alarm.fill" id="h2V-kR-DBM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ipd-Zn-BWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="50"/>
+        </scene>
         <!--MyInfo-->
         <scene sceneID="HqS-2N-Pdt">
             <objects>
@@ -53,10 +64,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXH-Si-ev6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="76"/>
+            <point key="canvasLocation" x="-193" y="-70"/>
         </scene>
     </scenes>
     <resources>
+        <image name="alarm" catalog="system" width="124" height="128"/>
+        <image name="alarm.fill" catalog="system" width="124" height="128"/>
         <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
         <image name="message" catalog="system" width="128" height="113"/>

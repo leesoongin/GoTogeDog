@@ -21,22 +21,20 @@ struct Profile : Codable {
         self.Owner = owner
         self.OwnerImages = ownerImages
     }
+    
+    var toDictionary : [String: Any]{
+        let dict : [String : Any] = [
+            "WalkLocation" : self.WalkLocation.toDictionary,
+            "Dog" : self.Dog.toDictionary,
+            "DogImages" : self.DogImages.toDictionary,
+            "Owner" : self.Owner.toDictionary,
+            "OwnerImages" : self.OwnerImages.toDictionary
+        ]
+        
+        return dict
+    }
 }
 
-//struct WalkLocation : Codable {
-//    var walkLocation : String
-//    var regionCode : String
-//    var toDictionary : [String : Any] {
-//        let dict : [String : Any] = ["walkLocation":self.walkLocation, "regionCode":self.regionCode]
-//
-//        return dict
-//    }
-//
-//    init(walkLocation : String, regionCode: String){
-//        self.walkLocation = walkLocation
-//        self.regionCode = regionCode
-//    }
-//}
 
 struct DogInfo : Codable {
     var age : String

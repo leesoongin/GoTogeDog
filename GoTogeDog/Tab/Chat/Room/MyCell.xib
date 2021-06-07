@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="136" id="KGk-i7-Jjw" customClass="MyCell" customModule="GoTogeDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="136"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="136"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myBubble" translatesAutoresizingMaskIntoConstraints="NO" id="b1r-fo-4tg">
+                        <rect key="frame" x="230.5" y="8" width="161.5" height="120"/>
+                        <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="755" verticalHuggingPriority="755" scrollEnabled="NO" editable="NO" text="aassdadsddsds" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-Kl-c9b">
+                        <rect key="frame" x="240.5" y="8" width="126.5" height="120"/>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1i-PZ-Ydg">
+                        <rect key="frame" x="187" y="116" width="39.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Z77-Kl-c9b" firstAttribute="top" secondItem="b1r-fo-4tg" secondAttribute="top" id="1KA-oq-hc7"/>
+                    <constraint firstItem="Z77-Kl-c9b" firstAttribute="trailing" secondItem="b1r-fo-4tg" secondAttribute="trailing" constant="-25" id="5Zt-fS-6CY"/>
+                    <constraint firstItem="b1r-fo-4tg" firstAttribute="bottom" secondItem="E1i-PZ-Ydg" secondAttribute="bottom" id="E0B-K1-Leb"/>
+                    <constraint firstItem="b1r-fo-4tg" firstAttribute="leading" secondItem="E1i-PZ-Ydg" secondAttribute="trailing" constant="4" id="OeK-9D-9D8"/>
+                    <constraint firstItem="b1r-fo-4tg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cQ8-9d-tmM"/>
+                    <constraint firstItem="Z77-Kl-c9b" firstAttribute="bottom" secondItem="b1r-fo-4tg" secondAttribute="bottom" id="cV9-6J-6al"/>
+                    <constraint firstAttribute="bottom" secondItem="b1r-fo-4tg" secondAttribute="bottom" constant="8" id="epk-Gi-ZQC"/>
+                    <constraint firstAttribute="trailing" secondItem="b1r-fo-4tg" secondAttribute="trailing" constant="4" id="lFS-zU-a2o"/>
+                    <constraint firstItem="E1i-PZ-Ydg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="yJY-FA-jX4"/>
+                    <constraint firstItem="Z77-Kl-c9b" firstAttribute="leading" secondItem="b1r-fo-4tg" secondAttribute="leading" constant="10" id="zko-4S-yJ3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="myTextView" destination="Z77-Kl-c9b" id="sxn-Oy-OQv"/>
+                <outlet property="timeLabel" destination="E1i-PZ-Ydg" id="Xm4-r2-trM"/>
+            </connections>
+            <point key="canvasLocation" x="318.84057971014494" y="63.616071428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="myBubble" width="66.5" height="52.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

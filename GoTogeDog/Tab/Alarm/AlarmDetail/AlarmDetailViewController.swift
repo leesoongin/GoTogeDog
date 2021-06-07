@@ -9,8 +9,9 @@ import UIKit
 import PanModal
 import Kingfisher
 
-class AroundCardDetailViewController: UIViewController {
+class AlarmDetailViewController: UIViewController {
     
+   
     @IBOutlet weak var addressNameLabel: UILabel!
     // dogInfo
     @IBOutlet weak var dogImageView: UIImageView!
@@ -26,6 +27,7 @@ class AroundCardDetailViewController: UIViewController {
     @IBOutlet weak var ownerIntroduceTextView: UITextView!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     let detailViewModel = AroundCardDetailViewModel.shared
     let firebaseManager = FirebaseManager.shared
@@ -76,16 +78,23 @@ class AroundCardDetailViewController: UIViewController {
         self.detailViewModel.fetchUserCard(userCard: userCard)
     }
     
-    @IBAction func requestMate(_ sender: Any) {
-        requestMateAlert()
+   
+    @IBAction func acceptMateRequest(_ sender: Any) {
+        acceptAlert()
     }
     
-    func requestMateAlert(){
-        let alert = UIAlertController(title: "메이트 신청", message: "정말로 신청하실건가요?", preferredStyle: .alert)
+    @IBAction func cancelMateRequest(_ sender: Any) {
+        cancelAlert()
+    }
+    
+    func acceptAlert(){
+        let alert = UIAlertController(title: "메이트 신청", message: "정말로 수락하실건가요?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default) { (ok) in
-            self.acceptRequestMateAlert()
-            //MARK: - 여기서 메이트 신청 보내자. 보낼 데이터는 나의 id, 닉네임, 프로필url
-            self.firebaseManager.sendWalkingMate(id: self.detailViewModel.userCard!.id)
+            //MARK: - 대화방 생성하기
+            let destinationId = self.detailViewModel.userCard?.id
+            let nickName = self.detailViewModel.userCard?.profile.Owner.nickName
+            self.firebaseManager.createChatRoom(destinationId: destinationId!,nickName : nickName!)
+            self.mateAcceptAlert()
         }
         let cancel = UIAlertAction(title: "cancel", style: .cancel) { (cancel) in }
         alert.addAction(cancel)
@@ -93,8 +102,8 @@ class AroundCardDetailViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    func acceptRequestMateAlert(){
-        let alert = UIAlertController(title: "메이트 신청", message: "신청이 완료되었습니다.\n상대방의 응답을 기다려주세요!", preferredStyle: .alert)
+    func cancelAlert(){
+        let alert = UIAlertController(title: "메이트 신청", message: "정말로 거절하실건가요?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default) { (ok) in
             
         }
@@ -104,9 +113,20 @@ class AroundCardDetailViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    func mateAcceptAlert(){
+        let alert = UIAlertController(title: "메이트 매칭", message: "매칭이 완료되었습니다!\n상대방과 대화를 나눠보세요!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (ok) in
+           
+        }
+        let cancel = UIAlertAction(title: "cancel", style: .cancel) { (cancel) in }
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
-extension AroundCardDetailViewController : UICollectionViewDataSource {
+extension AlarmDetailViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (self.detailViewModel.userCard?.profile.Dog.characters.count)!
     }
@@ -121,11 +141,11 @@ extension AroundCardDetailViewController : UICollectionViewDataSource {
     }
 }
 
-extension AroundCardDetailViewController : UICollectionViewDelegate {
+extension AlarmDetailViewController : UICollectionViewDelegate {
     
 }
 
-extension AroundCardDetailViewController : UICollectionViewDelegateFlowLayout {
+extension AlarmDetailViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemSpacing : CGFloat = 16
         let margin : CGFloat = 8
@@ -137,7 +157,7 @@ extension AroundCardDetailViewController : UICollectionViewDelegateFlowLayout {
 }
 
 //MARK: - panModal Presentable
-extension AroundCardDetailViewController : PanModalPresentable {
+extension AlarmDetailViewController : PanModalPresentable {
     var panScrollable: UIScrollView? {
             return nil
         }
@@ -152,7 +172,3 @@ extension AroundCardDetailViewController : PanModalPresentable {
     }
 }
 
-extension Notification.Name {
-    static let getUserCard = Notification.Name("getUserCard")
-    static let getChatData = Notification.Name("getChatData")
-}
