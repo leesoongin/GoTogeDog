@@ -12,8 +12,8 @@
     - Kingfisher
 
 ## 구현화면
-![IMG_8894](https://user-images.githubusercontent.com/55231029/120976091-f6920880-c7ac-11eb-9a75-43ddfe582045.PNG)
-![IMG_8895](https://user-images.githubusercontent.com/55231029/120976181-0d385f80-c7ad-11eb-9b11-bb698cfa5d05.PNG)
+![IMG_8894](https://user-images.githubusercontent.com/55231029/120976091-f6920880-c7ac-11eb-9a75-43ddfe582045.PNG){: width="100" height="100"}
+![IMG_8895](https://user-images.githubusercontent.com/55231029/120976181-0d385f80-c7ad-11eb-9b11-bb698cfa5d05.PNG){: width="100" height="100"}
 
 
 - **프로필 설정화면, 채팅방 화면**
