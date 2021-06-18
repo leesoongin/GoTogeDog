@@ -34,8 +34,8 @@
 
 # 구현화면    
     
-<p><img src="https://user-images.githubusercontent.com/55231029/120976091-f6920880-c7ac-11eb-9a75-43ddfe582045.PNG" width="230" height="420">
-<img src="https://user-images.githubusercontent.com/55231029/120976181-0d385f80-c7ad-11eb-9b11-bb698cfa5d05.PNG" width="230" height="420"></p>
+<p><img src="https://user-images.githubusercontent.com/55231029/120976091-f6920880-c7ac-11eb-9a75-43ddfe582045.PNG" width="250" height="450">
+<img src="https://user-images.githubusercontent.com/55231029/120976181-0d385f80-c7ad-11eb-9b11-bb698cfa5d05.PNG" width="250" height="450"></p>
 
 - **프로필 설정화면, 채팅방 화면**
 
