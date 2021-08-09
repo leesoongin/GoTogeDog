@@ -1,6 +1,8 @@
 # GoTogeDog
 
-산책친구를 만들어보자! 
+산책친구를 만들어보자!
+심심한 산책길, 나와 함께 산책할 내 주변의 애견인들을 찾아 매칭시켜주는 앱 입니다.
+
 
 ## 라이브러리
     - Kakao SDK
@@ -9,7 +11,7 @@
     - NMapsMap
     - PanModal
     - YPImagePicker
-    - Kingfisher
+    - Kingfisher - **`6.0`**
     
 ## 주요기능
 
